@@ -1,6 +1,8 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import LogoImg from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
+
+import '../styles/responsive.scss';
 import '../styles/room.scss';
 
 import { RoomCode } from '../components/RoomCode';
@@ -15,8 +17,8 @@ type RoomParams = {
 }
 
 export function Room() {
-    const { user,  signInWithGoogle } = useAuth()
-   
+    const { user, signInWithGoogle } = useAuth()
+
     const navigate = useNavigate();
 
     const params = useParams<RoomParams["id"]>();
@@ -69,8 +71,8 @@ export function Room() {
     }
 
     async function handleButtonLoggin() {
-        if(!user) {
-           await signInWithGoogle()
+        if (!user) {
+            await signInWithGoogle()
         }
 
         navigate(`/rooms/${roomId}`);
@@ -78,17 +80,17 @@ export function Room() {
 
 
     return (
-        <div id="page-room">
+        <div id="page-room" className="mobile">
 
             <header>
-                <div className="content">
+                <div className="content header-mobile">
                     <img src={LogoImg} alt="Logo" />
                     <RoomCode code={`${roomId}`} />
                 </div>
             </header>
 
 
-            <main className="content">
+            <main className="content mobile-content">
                 <div className="room-title">
                     <h1>Sala {title}</h1>
                     {questions.length > 0 && <span className="notify">{questions.length} pergunta(s)</span>}
@@ -101,7 +103,7 @@ export function Room() {
                         placeholder="O que você quer perguntar? "
                     />
 
-                    <div className="form-footer">
+                    <div className="form-footer mobile-form">
 
                         {user ? (
                             <div className="user-info">
@@ -149,6 +151,3 @@ export function Room() {
 
 }
 
-function signInWithGoogle() {
-    throw new Error('Function not implemented.');
-}

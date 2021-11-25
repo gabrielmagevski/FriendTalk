@@ -1,6 +1,8 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import LogoImg from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
+
+import '../styles/responsive.scss';
 import '../styles/room.scss';
 
 import { RoomCode } from '../components/RoomCode';
@@ -26,6 +28,7 @@ export function AdminRoom() {
     const roomId = params.id;
 
     const { title, questions } = useRoom(roomId)
+
 
     async function handleEndRoom() {
         database.ref(`rooms/${roomId}`).update({
@@ -56,12 +59,12 @@ export function AdminRoom() {
 
 
     return (
-        <div id="page-room">
+        <div id="page-room" className="mobile">
 
             <header>
-                <div className="content">
+                <div className="content header-mobile">
                     <img src={LogoImg} alt="Logo" />
-                    <div>
+                    <div className="header-mobile">
                         <RoomCode code={`${roomId}`} />
                         <Button
                             isOutlined
@@ -72,7 +75,7 @@ export function AdminRoom() {
             </header>
 
 
-            <main className="content">
+            <main className="content mobile-content">
                 <div className="room-title">
                     <h1>Sala {title}</h1>
                     {questions.length > 0 && <span className="notify">{questions.length} pergunta(s)</span>}

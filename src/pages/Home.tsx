@@ -6,6 +6,7 @@ import googleIconImg from '../assets/images/google-icon.svg';
 
 import { Button } from '../components/Button';
 
+import '../styles/responsive.scss';
 import '../styles/auth.scss';
 
 import { useAuth } from './../hooks/useAuth';
@@ -53,14 +54,14 @@ export function Home() {
 
 
     return(
-        <div id="page-auth">
+        <div id="page-auth" className="mobile">
             <aside>
                 <img src={illustrationImg} alt="illustration" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
                 <p>Tire as dúvidas da sua audiência em tempo real</p>
             </aside>
             <main>
-                <div className="main-content">
+                <div className="main-content mobile-content">
                     <img src={logoImg} alt="logo da aplicação letmeask" />
                     <button onClick={handleCreateRoom} className="create-room">
                         <img src={googleIconImg} alt="logo do Google" />

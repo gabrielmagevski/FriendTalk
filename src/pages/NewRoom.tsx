@@ -8,6 +8,8 @@ import logoImg from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
 
 import '../styles/auth.scss';
+import '../styles/responsive.scss';
+
 import { database } from '../services/firebase';
 import { useNavigate } from 'react-router-dom';
 
@@ -35,14 +37,14 @@ export function NewRoom() {
     }
 
     return(
-        <div id="page-auth">
+        <div id="page-auth" className="mobile">
             <aside>
                 <img src={illustrationImg} alt="illustration" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
                 <p>Tire as dúvidas da sua audiência em tempo real</p>
             </aside>
             <main>         
-                <div className="main-content">
+                <div className="main-content mobile-content">
                     <img src={logoImg} alt="logo da aplicação letmeask" />
                     
                     <h2>Criar uma nova sala </h2>
