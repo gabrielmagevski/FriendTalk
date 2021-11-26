@@ -1,9 +1,13 @@
-
-@media (max-width: 812px) {
+@media (max-width: 900px) {
     .mobile-content {
-        margin: 100px 0px 100px 0px;
         padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px;
+
     }
+
     .mobile {
         display: flex;
         justify-content: space-between;
@@ -23,18 +27,30 @@
         flex-wrap: wrap;
         margin: 5px;
     }
-    
+
     .question-mobile {
         display: flex;
         max-width: 100%;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        
+
+    }
+
+
+    .room-title-mobile {
+        margin: 32px 0 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .notify-mobile {
+        margin-top: 20px;
     }
 
     .mobile-form {
         gap: 20px;
     }
 }
-

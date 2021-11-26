@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from 'react';
 
-import '../styles/button.scss';
+import './button.scss';
 
 type Buttonprops = ButtonHTMLAttributes<HTMLButtonElement> & {
     isOutlined?: boolean

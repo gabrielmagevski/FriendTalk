@@ -1,5 +1,5 @@
 #page-room {
-    header{
+    header {
         padding: 24px;
         border-bottom: 1px solid #e2e2e2;
 
@@ -10,14 +10,14 @@
             justify-content: space-between;
             align-items: center;
 
-            > img {
+            >img {
                 max-height: 45px;
             }
 
-            div{
+            div {
                 display: flex;
                 gap: 16px;
-                
+
                 button {
                     height: 40px;
                 }
@@ -27,18 +27,21 @@
 
 
     main {
-        max-width: 800px;
-        margin: 0 auto;
+        @media (min-width:769px) {
+            padding: 10px 0px 100px 0px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
         .room-title {
-            margin:  32px 0 24px;
+            margin: 32px 0 24px;
             display: flex;
             align-items: center;
         }
 
         .notify {
             margin-left: 16px;
-            background: #e559f9;
+            background: #274C77;
             border-radius: 9999px;
             padding: 8px 16px;
             color: #fff;
@@ -48,43 +51,45 @@
 
         form {
             
-            textarea {
+            textarea {              
                 width: 100%;
                 border: 0;
-                padding: 16px;
-                border-radius: 8px;
+                padding: 21px 15px 6px;
+                border-radius: 35px;
                 background: #fefefe;
                 box-shadow: 0 2px 12px rgba (0, 0, 0, 0.04);
                 resize: vertical;
-                min-height: 130px;
+                margin-top: 25px;
             }
         }
 
-        .form-footer{
+        .form-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 16px;
-            .user-info{
-              display: flex;
-              align-items: center;
+            
 
-              img {
-                  width: 32px;
-                  height: 32px;
-                  border-radius: 50%;
-              }
+            .user-info {
+                margin: 16px 0px 0px 15px;
+                display: flex;
+                align-items: center;
 
-              span {
-                  margin-left: 8px;
-                  color: #29292e;
-                  font-weight: 500;
-                  font-size: 14px;
-              }
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    margin-left: 8px;
+                    color: #29292e;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
             }
 
 
-            > span {
+            >span {
                 font-size: 14px;
                 color: #737380;
                 font-weight: 500;
@@ -92,7 +97,7 @@
                 button {
                     background: transparent;
                     border: none;
-                    color: #835afd;
+                    color: #6096BA;
                     text-decoration: underline;
                     font-size: 14px;
                     cursor: pointer;
@@ -103,6 +108,40 @@
 
         .question-list {
             margin-top: 32px;
+        }
+
+        .button {
+
+            margin-top: 27px;
+            height: 50px;
+            border-radius: 50px;
+            font-weight: 500;
+            background: #274C77;
+            color: #FFF;
+            border: 1px solid #213f61;
+            padding: 0 32px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+            border: 0;
+
+            transition: filter 0.2s;
+
+            img {
+                margin-right: 8px;
+            }
+
+            &:not(:disabled):hover {
+                filter: brightness(0.9);
+            }
+
+            &:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
         }
     }
 }

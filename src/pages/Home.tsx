@@ -4,7 +4,7 @@ import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 
-import { Button } from '../components/Button';
+import { Button } from '../components/Button/Button';
 
 import '../styles/responsive.scss';
 import '../styles/auth.scss';
@@ -47,8 +47,10 @@ export function Home() {
             alert('Room already closed.');
             return;
         }
-        
+       
+
        navigate(`/rooms/${RoomCode}`); 
+       
     }
 
 
@@ -57,8 +59,8 @@ export function Home() {
         <div id="page-auth" className="mobile">
             <aside>
                 <img src={illustrationImg} alt="illustration" />
-                <strong>Crie salas de Q&amp;A ao-vivo</strong>
-                <p>Tire as dúvidas da sua audiência em tempo real</p>
+                <strong>Crie bate-papos com seus amigos e familiares</strong>
+                <p>Converse com amigos e familiares por aqui enquanto estiver longe</p>
             </aside>
             <main>
                 <div className="main-content mobile-content">

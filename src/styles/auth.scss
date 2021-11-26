@@ -6,7 +6,7 @@
     aside {
         flex: 7;
 
-        background: #835afd;
+        background: #274C77;
         color: #FFF;
 
         display: flex;
@@ -54,6 +54,7 @@
 
         > img {
             align-self: center;
+            width: 100%;
         }
         
         h2 {
@@ -81,12 +82,12 @@
         }
 
         p {
-            font-size: 14px;
+            font-size: 15px;
             color: #737380;
             margin-top: 16px;
 
             a {
-                color: #e55ef9f9;
+                color: #008cff
             }
         }
     }
