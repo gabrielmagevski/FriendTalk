@@ -1,5 +1,6 @@
 <h1>FriendTalk</h1>
 Projeto refeito em cima da base do letmeask da rocket
+<hr />
 <div>
   <img width="200px"  src="https://github.com/gabrielmagevski/FriendTalk/blob/main/public/readme/home.png" alt="image1">
    <img width="200px"  src="https://github.com/gabrielmagevski/FriendTalk/blob/main/public/readme/home 2.png" alt="image2">
